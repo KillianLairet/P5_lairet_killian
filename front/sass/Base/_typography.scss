@@ -1,0 +1,30 @@
+h1{
+    font-size: $fontSize-h1;
+    font-family: $fontFamily-h1;
+    color: $color-titles;
+}
+h2{
+    font-size: $fontSize-h2;
+    color: $color-titles;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: $fontSize-p;
+}
+
+.product{
+    &__text{
+        &__name{
+            font-size: $fontSize-productName;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &__price{
+            font-size: $fontSize-productPrice;
+        }
+    }
+}

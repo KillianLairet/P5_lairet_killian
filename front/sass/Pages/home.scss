@@ -1,0 +1,32 @@
+h2{
+    margin: 20px 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#product-grid{
+    padding: 20px 20%;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product{
+    margin-bottom: 40px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    &__img{
+        width: 30%;
+        transition: 300ms ease;
+        &:hover{
+            opacity: 60%;
+        }
+    }
+    &__text{
+        width: 30%;
+        &__price{
+            padding-bottom: 8px;
+        }
+    }
+}
