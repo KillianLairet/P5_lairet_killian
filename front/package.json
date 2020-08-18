@@ -1,10 +1,10 @@
 {
   "name": "front",
   "version": "1.0.0",
-  "description": "",
+  "description": "détails V0 :   - page basket.html => manque tous les styles pour affichage du panier   - suppression d'article dans le panier => ne marche pas bien   - formulaire contact et requete POST => pas fait   - pour API => gestion des promesses pas encore tout compris...",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/style.scss:./css/style.css"
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
   },
   "author": "",
   "license": "ISC"

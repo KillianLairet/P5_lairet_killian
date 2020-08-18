@@ -1,0 +1,42 @@
+.bkt-pg-ctn{
+    padding: 10px 20%;
+    h2{
+        margin: 20px 0px;
+        padding: 0px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $color-divider;
+    }
+    &__abstract{
+        display: flex;
+        border-bottom: 1px solid $color-divider;
+        margin: 20px 0px;
+        padding: 20px 0px;
+        &__price{
+            width: 35%;
+            display: flex;
+            justify-content: space-around;
+        }
+        &__btn{
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    #basket{
+        table{
+            width: 100%;
+        }
+        tr{
+            margin: 20px 0px;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-divider;
+        }
+        td{
+            align-self: center;
+        }
+    }
+}

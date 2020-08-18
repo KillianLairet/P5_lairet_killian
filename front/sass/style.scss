@@ -6,13 +6,17 @@
 @import "./Base/base";
 
 // IMMORT COMPONENTS
+@import "./Components/buttons";
 
 // IMPORT LAYOUT
 @import "./Layout/header";
 @import "./Layout/footer";
+@import "./Layout/product-build";
 
 // IMPORT PAGES
-@import "./Pages/home.scss";
+@import "./Pages/home";
+@import "./Pages/basket";
+
 // IMPORT THEMES
 
 // IMPORT VENDORS

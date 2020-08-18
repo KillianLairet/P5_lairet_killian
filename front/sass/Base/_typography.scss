@@ -10,6 +10,7 @@ h2{
 
 a{
     text-decoration: none;
+    color: $color-text;
 }
 
 p{
@@ -27,4 +28,51 @@ p{
             font-size: $fontSize-productPrice;
         }
     }
+
+    &--page{
+        &__text{
+            &__name{
+                font-size: $fontSize-productName;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            &__price{
+                font-size: $fontSize-productPrice;
+            }
+        }
+    }
+}
+
+.basket-delete-btn{
+    font-size: $fontSize-btnDelete;
+    color: $color-btnDelete;
+}
+.basket-product-price{
+    font-weight: bold;
+}
+
+.bkt-pg-ctn{
+    h2{
+        font-size: $fontSize-h2;
+        color: $color-text;
+        text-align: left;
+    }
+    &__abstract{
+        &__price{
+            &__p{
+                font-weight: bold;
+                font-size: $fontSize-p;
+                align-self: center;
+                &--title{
+                    font-size: $fontSize-total;
+                }
+            }
+        }
+    }
+    
+}
+
+.payment-btn{
+    font-size: $fontSize-btnPayment;
+    color: $color-text;
 }
