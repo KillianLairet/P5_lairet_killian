@@ -39,15 +39,3 @@ function displayProductForList(product, targetId){
             </div>
         </div>`;
 }
-
-/**
- *
- * Link to the selected product page
- *   selectedProductId: string => the id of the selected product
- */
-/*
-function openProductPage(selectedProductId) {
-    document.location.href= 'product.html?productId=' + selectedProductId;
-}
-
- */
