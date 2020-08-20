@@ -5,5 +5,5 @@ maj_entete(taille_panier);
 
 function maj_entete(taille) {
     var target = document.getElementById('mon_panier');
-    target.innerHTML =`<p><a href="basket.html">mon panier (${taille})</a></p>`
+    target.innerHTML =`<p><a href="basket.html"><img src="shopping-bag.svg"><sup>${taille}</sup></a></p>`
 }

@@ -6,6 +6,7 @@ h1{
 h2{
     font-size: $fontSize-h2;
     color: $color-titles;
+    text-align: center;
 }
 
 a{
@@ -15,6 +16,14 @@ a{
 
 p{
     font-size: $fontSize-p;
+}
+
+header{
+    #mon_panier{
+        a sup{
+            font-size: $fontSize-quantity;
+        }
+    }
 }
 
 .product{
@@ -43,10 +52,27 @@ p{
     }
 }
 
-.basket-delete-btn{
-    font-size: $fontSize-btnDelete;
+.add-to-cart-btn{
+    font-size: $fontSize-btn;
+    color: $color-text;
+}
+
+.custom-choice-btn{
+    font-size: $fontSize-btn;
+    color: $color-text;
+    text-align-last: center;
+}
+
+.delete-btn{
+    font-size: $fontSize-btn;
     color: $color-btnDelete;
 }
+
+.deleteAll-btn{
+    font-size: $fontSize-btn;
+    color: $color-btnDelete;
+}
+
 .basket-product-price{
     font-weight: bold;
 }
@@ -57,22 +83,52 @@ p{
         color: $color-text;
         text-align: left;
     }
-    &__abstract{
-        &__price{
-            &__p{
+    #basket{
+        .bkt-end{
+            &__total{
                 font-weight: bold;
                 font-size: $fontSize-p;
                 align-self: center;
-                &--title{
-                    font-size: $fontSize-total;
-                }
+                font-size: $fontSize-total;
+            }
+            &__price{
+                font-weight: bold;
+                font-size: $fontSize-p;
+                align-self: center;
             }
         }
     }
-    
+    #contactInfos{
+        form{
+            .legend{
+                text-transform: uppercase;
+                font-size: .8em;
+                color: $color-btnDelete;
+            }
+            .textInput{
+                font-size: $fontSize-form;
+                color: $color-text;
+            }
+        }
+    }
 }
 
 .payment-btn{
-    font-size: $fontSize-btnPayment;
+    font-size: $fontSize-btn;
     color: $color-text;
+}
+
+#order-confirmation{
+    p{
+        text-align: center;
+        font-size: $fontSize-p;
+        color: $color-text;
+        span{
+            font-weight: bold;
+        }
+    }
+    .thanks{
+    color: $color-primary;
+    font-weight: bold;
+    }
 }

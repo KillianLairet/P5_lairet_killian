@@ -1,10 +1,12 @@
 // COLORS
 $color-primary: #FFFFFF;
 $color-secondary: #f3e9f1;
+$color-tertiary: #F8F8FF;
 $color-titles: #000000;
 $color-text: #000000;
 $color-btnDelete: #808080;
 $color-divider: #DCDCDC;
+$color-thanks: #66cdaa;
 
 // FONT SIZE
 $fontSize-h1: 2em;
@@ -12,9 +14,10 @@ $fontSize-h2: 1.5em;
 $fontSize-p: 1em;
 $fontSize-productName: 1.3em;
 $fontSize-productPrice: .9em;
-$fontSize-btnDelete: .8em;
-$fontSize-btnPayment: .8em;
+$fontSize-btn: .8em;
 $fontSize-total: 1.5em;
+$fontSize-quantity: 16px;
+$fontSize-form: 1em;
 
 // FONT FAMILY
 $fontFamily-h1: 'Comic Sans MS';

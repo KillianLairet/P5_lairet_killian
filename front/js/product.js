@@ -44,15 +44,15 @@ function displayProduct(product, targetId){
     var target = document.getElementById(targetId);
     var htmlForCustomize = buildFormPart(product.lenses);
     target.innerHTML +=
-        `<div class="product__img">
-            <img class="camera-pic" src="${product.imageUrl}" alt="${product.name}" style="width: 100%;">
+        `<div class="product--page__img">
+            <img src="${product.imageUrl}" alt="${product.name}" style="width: 100%;">
         </div>
-        <div class="product__text">
-            <p class="product__text__name">${product.name}</p>
-            <p class="product__text__price">${product.price/100} EUR</p>
-            <p class="product__text__description">${product.description}</p>
-            <p class="product__text__description">${htmlForCustomize}</p>
-            <p><button onclick="openBasketPage('${product._id}', '${product.name}', '${product.price/100}', '${product.imageUrl}')">Ajouter au panier</button></p>
+        <div class="product--page__text">
+            <p class="product--page__text__name">${product.name}</p>
+            <p class="product--page__text__price">${product.price/100} EUR</p>
+            <p class="product--page__text__description">${product.description}</p>
+            <select class="custom-choice-btn" name="customChoice" id="customChoice">${htmlForCustomize}</select>
+            <button class="add-to-cart-btn" onclick="openBasketPage('${product._id}', '${product.name}', '${product.price/100}', '${product.imageUrl}')">Ajouter au panier</button>
         </div>`;
 }
 
@@ -65,13 +65,9 @@ function displayProduct(product, targetId){
  */
 function buildFormPart(element){
     var html = '';
-    html += `<p>&nbsp;</p><fieldset>
-                <p><label for="customChoice">Choisir le type de lentille</label></p><br>
-                <select name="customChoice" id="customChoice">`;
     for (var i=0; i<element.length; i++){
-        html += `<p><option value="${element[i]}">${element[i]}</option></p>`;
+        html += `<option value="${element[i]}">${element[i]}</option>`;
     }
-    html += `</select></fieldset><p>&nbsp;</p>`;
     return html;
 }
 

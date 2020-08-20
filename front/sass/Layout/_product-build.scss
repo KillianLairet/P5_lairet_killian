@@ -1,20 +1,20 @@
 .product{
-    margin-bottom: 40px;
+    margin: 20px auto;
     padding: 0px;
     display: flex;
     justify-content: space-around;
     &__img{
-        width: 30%;
+        width: 50%;
     }
     &__text{
-        width: 30%;
+        width: 40%;
         &__price{
             padding-bottom: 8px;
         }
     }
 
     &--page{
-        margin-bottom: 40px;
+        margin: 5% 20%;
         padding: 0px;
         display: flex;
         justify-content: space-around;
@@ -22,7 +22,8 @@
             width: 50%;
         }
         &__text{
-            width: 30%;
+            position: relative;
+            width: 40%;
             &__price{
                 padding-bottom: 8px;
             }

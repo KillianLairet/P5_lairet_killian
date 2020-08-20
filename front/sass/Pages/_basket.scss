@@ -1,6 +1,6 @@
 .bkt-pg-ctn{
     padding: 10px 20%;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     h2{
         margin: 20px 0px;
         padding: 0px;
@@ -38,6 +38,52 @@
         }
         td{
             align-self: center;
+        }
+        .bkt-end{
+            &__btn{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            }
+        }
+    }
+
+    #contactInfos{
+        margin-top: 20px;
+        .form{
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: $color-tertiary;
+            border-radius: 30px;
+            &__info{
+                width: 50%;
+                p{
+                    padding: 5px 0px;
+                }
+            }
+            &__delivery{
+                width: 50%;
+                p{
+                    padding: 5px 0px;
+                }
+            }
+            .legend{
+                padding: 6px 0px;
+            }
+            .textInput{
+                padding: 6px 6px;
+                width: 90%;
+                background-color: transparent;
+                border: 1px solid $color-divider;
+                border-radius: 10px;
+            }
+            &__btn{
+                margin: 20px 10px 0px 0px;
+                width: 100%;
+                text-align: end;
+            }
         }
     }
 }

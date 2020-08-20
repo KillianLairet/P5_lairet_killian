@@ -21,17 +21,17 @@ function affichePanier(basket, targetId){
                 <td>${products[i].name}</td>
                 <td>${products[i].customChoice}</td>
                 <td class="basket-product-price">€${products[i].price} EUR</td>
-                <td><button class="basket-delete-btn" onclick="deleteProduct('${i}')">SUPPRIMER</button></td>
+                <td><button class="delete-btn" onclick="deleteProduct('${i}')">SUPPRIMER</button></td>
             </tr>`;
         total += Number(products[i].price);
     }
     html +=
-        `   <tr>
-                <td colspan="2">TOTAL</td>
-                <td>€${total} EUR</td>
-                <td>
-                    <button onclick="emptyBasket()">TOUT SUPPRIMER</button>
-                    <button onclick="displayContactForm()">PAIEMENT</button>
+        `   <tr class="bkt-end">
+                <td class="bkt-end__total" colspan="2">TOTAL</td>
+                <td class="bkt-end__price">€${total} EUR</td>
+                <td class="bkt-end__btn">
+                    <button class="deleteAll-btn" onclick="emptyBasket()">TOUT SUPPRIMER</button>
+                    <button class="payment-btn" onclick="displayContactForm()">PAIEMENT</button>
                 </td>
             </tr>
         </table>`;
@@ -55,31 +55,31 @@ function displayContactForm(){
     var html = '';
 
     html +=
-        `<form method="post" action="#" id="submitForm">
-            <fieldset>
-                <legend>Vos coordonnées</legend>
+        `<form class="form" method="post" action="#" id="submitForm">
+            <div class="form__info">
+                <legend class="legend">Vos coordonnées</legend>
                 <p>
-                    <input type="text" name="lastName" id="lastName" size="30" placeholder="Nom" value="" required>
+                    <input class="textInput" type="text" name="lastName" id="lastName" placeholder="Nom" value="kiki" required>
                 </p>
                 <p>
-                    <input type="text" name="firstName" id="firstName" size="30" placeholder="Prénom" value="" required>
+                    <input class="textInput" type="text" name="firstName" id="firstName" placeholder="Prénom" value="lai" required>
                 </p>
                 <p>
-                    <input type="email" name="email" id="email" size="30" placeholder="E-mail" value="" required>
+                    <input class="textInput" type="email" name="email" id="email" placeholder="E-mail" value="kl@icloud.com" required>
                 </p>
-            </fieldset>
-            <fieldset>
-                <legend>Adresse de livraison</legend>
+            </div>
+            <div class="form__delivery">
+                <legend class="legend">Adresse de livraison</legend>
                 <p>
-                    <input type="text" name="address" id="address"  size="60" placeholder="Adresse" value="" required>
+                    <input class="textInput" type="text" name="address" id="address"  placeholder="Adresse" value="1 rue pierre" required>
                 </p>
                 <p>
-                    <input type="text" name="city" id="city"  size="30" placeholder="Ville" value="" required>
+                    <input class="textInput" type="text" name="city" id="city"  placeholder="Ville" value="paris" required>
                 </p>
-            </fieldset>
-            <p>
-                <input type="reset" value="Annuler">&nbsp;&nbsp;&nbsp;
-                <input type="submit" value="Valider la commande">
+            </div>
+            <p class="form__btn">
+                <input class="cancelForm-btn" type="reset" value="ANNULER">
+                <input class="order-btn" type="submit" value="CONFIRMER">
             </p>
         </form>`;
     target.innerHTML = html;
@@ -102,12 +102,15 @@ function displayContactForm(){
         }
 
         var toSend = {contact, products};
-    
+
         var xhr = new XMLHttpRequest();
+        console.log(xhr)
         xhr.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 201) {
-                console.log(this.response);
-                alert('Merci de votre achat');
+                console.log(this.response)
+                var response = JSON.parse(this.response);
+                localStorage.setItem('orderId', response.orderId);
+                document.location.href = 'confirmation.html';
             } else if(this.readyState == 4) {
                 alert('Une erreur est survenue');
             }

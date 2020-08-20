@@ -2,7 +2,6 @@
     h2{
         margin: 20px 0px;
         padding: 0px;
-        text-align: center;
     }
 
     #product-grid{
@@ -23,6 +22,8 @@
         &__text{
             a:hover{
                 text-decoration: underline;
+                opacity: 70%;
+                cursor: pointer;
             }
         }
     }

@@ -7,7 +7,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    a{
+    .link-h1{
         background: linear-gradient(to top, $color-titles 0%, $color-titles 2px, transparent 3px) no-repeat;
         background-size: 0% 100%;
         transition: background-size 300ms ease;
@@ -20,5 +20,14 @@ header{
         padding: 0px;
         }
     }
-    
+    #mon_panier{
+        position: absolute;
+        right: 5%;
+        a{
+            font-size: 30px;
+            &:hover{
+                opacity: 75%;
+            }
+        }
+    }
 }
