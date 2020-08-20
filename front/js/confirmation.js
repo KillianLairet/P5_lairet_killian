@@ -1,3 +1,19 @@
+/**
+ * @name : Orinoco
+ * @create : 20/08/2020
+ * @version : 1.0.0 ALPHA
+ * @author : Killian Lairet
+ */
+
+
+
+
+/**
+ * orderSummary - Affiche la confirmation de commande avec l'Id de la commande et le prix total
+ * 'orderId' est récupéré dans le localStorage
+ * 'orderPrice' est l'addition de price
+ * 'price' est récupéré dans le panier qui est dans le localStorage
+ */
 function orderSummary() {
     var target = document.getElementById('order-confirmation');
     var html = '';

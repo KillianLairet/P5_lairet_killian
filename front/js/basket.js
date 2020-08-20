@@ -1,12 +1,20 @@
 /**
- *
- * to be executed when basket.html is loaded
+ * @name : Orinoco
+ * @create : 20/08/2020
+ * @version : 1.0.0 ALPHA
+ * @author : Killian Lairet
  */
 
-var basket = new Basket();  // nouvelle instance de classe Basket pour récupérer le panier courant
-affichePanier(basket, 'basket');
+
+
+
 var url = localStorage.getItem('baseURL');
 
+/**
+ * affichePanier - Affiche le panier en fonction du panier construit dans le localStorage
+ * @param {Object} basket Récupère le panier
+ * @param {string} targetId Id de la cible HTML
+ */
 function affichePanier(basket, targetId){
     var products = basket.basketProducts;
     var target = document.getElementById(targetId);
@@ -37,19 +45,31 @@ function affichePanier(basket, targetId){
         </table>`;
     target.innerHTML = html;
 }
+var basket = new Basket();
+affichePanier(basket, 'basket');
 
+/**
+ * deleteProduct - Supprimer un produit du panier et affiche le nouveau panier
+ * @param {number} idx L'index du produit à supprimer
+ */
 function deleteProduct(idx){
     basket.removeProduct(idx);
     affichePanier(basket, 'basket');
     maj_entete(basket.basketProducts.length);
 }
 
+/**
+ * emptyBasket - Supprime tous les produits du panier et affiche le panier vide
+ */
 function emptyBasket() {
     basket.empty();
     affichePanier(basket, 'basket');
     maj_entete(basket.basketProducts.length)
 }
 
+/**
+ * displayContactForm - Affiche le formulaire de contact
+ */
 function displayContactForm(){
     var target = document.getElementById('contactInfos');
     var html = '';
@@ -85,7 +105,8 @@ function displayContactForm(){
     target.innerHTML = html;
 
     /**
-     * request AJAX method POST - send data to server
+     * Fait une reqête Ajax de type POST à l'envoi du formulaire
+     * Si la requête est correcte alors on stock l'Id de la commande dans le localStorage et on ouvre la page de confirmation
      */
     document.getElementById('submitForm').addEventListener('submit', function(event) {
         event.preventDefault();

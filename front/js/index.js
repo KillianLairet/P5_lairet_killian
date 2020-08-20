@@ -1,12 +1,21 @@
 /**
- *
- * to be executed when index.html is loaded
+ * @name : Orinoco
+ * @create : 20/08/2020
+ * @version : 1.0.0 ALPHA
+ * @author : Killian Lairet
  */
+
+
+
+
 var basket = new Basket();
 
+/**
+ * Fait une requête Ajax de type GET à 'url'
+ * 'url' est récupérer dans le localStorage
+ */
 var url = localStorage.getItem('baseURL');
 var targetId = 'product-grid';
-
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url);
 xhr.onreadystatechange = function () {
@@ -20,12 +29,11 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 /**
- *
- * Display one product (to be repeated to display all available products)
- *   product: object => the product to be displayed
- *   targetId: string => id of the target container
+ * displayProductForList - Affiche un produit (la boucle for dans la requête Ajax permet de le répéter pour tous les produits disponibles)
+ * @param {object} product Le produit à afficher
+ * @param {string} targetId Id de la cible HTML
  */
-function displayProductForList(product, targetId){
+function displayProductForList(product, targetId) {
     var target = document.getElementById(targetId);
     target.innerHTML +=
         `<div class="product">
@@ -34,8 +42,16 @@ function displayProductForList(product, targetId){
             </div>
             <div class="product__text">
                 <p class="product__text__name"><a onclick="openProductPage('${product._id}')">${product.name}</a></p>
-                <p class="product__text__price">${product.price/100} EUR</p>
+                <p class="product__text__price">${product.price / 100} EUR</p>
                 <p class="product__text__description">${product.description}</p>
             </div>
         </div>`;
+}
+
+/**
+ * openProductPage - Ouvre la page produit en lui ajout l'Id du produit en paramètre d'Url
+ * @param {string} selectedProductId L'Id du produit sélectionner 
+ */
+function openProductPage(selectedProductId) {
+    document.location.href= 'product.html?productId=' + selectedProductId;
 }

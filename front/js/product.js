@@ -1,24 +1,28 @@
 /**
- *
- * to be executed when product.html is loaded
+ * @name : Orinoco
+ * @create : 20/08/2020
+ * @version : 1.0.0 ALPHA
+ * @author : Killian Lairet
  */
 
-// motclé à chercher dans l'url
-var paramKey = 'productId';
 
+
+ 
+/**
+ * Recherche du paramètre 'productId' dans l'Url, si oui alors on récupère la valeur et on fait une requête Ajax
+ */
+var paramKey = 'productId';
 var params = new URLSearchParams(document.location.search);
-if (params.has(paramKey)) {  //on cherche si motclé présent dans url
-    var paramValue = params.get(paramKey);  // on récupère la valeur
-    // si ok on fait requete
+if (params.has(paramKey)) {
+    var paramValue = params.get(paramKey);
     getProductInfos();
-}
-else {
+} else {
     alert('aucun produit selectionné...');
 }
 
 /**
- *
- * request to server to obtain chosen product informations
+ * getProductInfos - Fait une requête Ajax de type GET à 'url'
+ * 'url' est récupérer dans le localStorage
  */
 function getProductInfos() {
     var url = localStorage.getItem('baseURL') + paramValue;
@@ -35,10 +39,9 @@ function getProductInfos() {
 }
 
 /**
- *
- * Display all information for selected product
- *   product: object => product to be displayed
- *   targetId: string => id of the target container
+ * displayProductForList - Affiche un produit (la boucle for dans la requête Ajax permet de le répéter pour tous les produits disponibles)
+ * @param {object} product Le produit à afficher
+ * @param {string} targetId Id de la cible HTML
  */
 function displayProduct(product, targetId){
     var target = document.getElementById(targetId);
@@ -56,12 +59,10 @@ function displayProduct(product, targetId){
         </div>`;
 }
 
-
 /**
- *
- * Display the form part with the number of options available for customization
- *   element: string => the element of product to be displayed
- *   return: string => the html part for customization
+ * buildFormPart - afficher une liste de choix en fonction du nombre d'option disponible
+ * @param {string} element L'élément du produit à afficher
+ * @return {string} Renvoie le code HTML à afficher
  */
 function buildFormPart(element){
     var html = '';
@@ -72,11 +73,10 @@ function buildFormPart(element){
 }
 
 /**
- *
- * Create a new Product object, update de basket, store in localStorage and link to the basket page
- *   selectedProductId: string => the product id
- *   selectedProductName: string => the product name
- *   selectedProductPrice: string => the product price
+ * openBasketPage - Crée un nouveau objet produit, crée un objet panier et y ajoute le produit, ouvre la page 'basket.html'
+ * @param {string} selectedProductId L'Id du produit
+ * @param {string} selectedProductName Le nom du produit
+ * @param {string} selectedProductPrice Le prix du produit
  */
 function openBasketPage(selectedProductId, selectedProductName, selectedProductPrice, selectedProductImageUrl) {
     var selectedCustomIndex = document.getElementById("customChoice").selectedIndex;
