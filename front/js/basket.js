@@ -79,22 +79,22 @@ function displayContactForm(){
             <div class="form__info">
                 <legend class="legend">Vos coordonnées</legend>
                 <p>
-                    <input class="textInput" type="text" name="lastName" id="lastName" placeholder="Nom" value="kiki" required>
+                    <input class="textInput" type="text" name="lastName" id="lastName" placeholder="Nom" value="" required>
                 </p>
                 <p>
-                    <input class="textInput" type="text" name="firstName" id="firstName" placeholder="Prénom" value="lai" required>
+                    <input class="textInput" type="text" name="firstName" id="firstName" placeholder="Prénom" value="" required>
                 </p>
                 <p>
-                    <input class="textInput" type="email" name="email" id="email" placeholder="E-mail" value="kl@icloud.com" required>
+                    <input class="textInput" type="email" name="email" id="email" placeholder="E-mail" value="" required>
                 </p>
             </div>
             <div class="form__delivery">
                 <legend class="legend">Adresse de livraison</legend>
                 <p>
-                    <input class="textInput" type="text" name="address" id="address"  placeholder="Adresse" value="1 rue pierre" required>
+                    <input class="textInput" type="text" name="address" id="address"  placeholder="Adresse" value="" required>
                 </p>
                 <p>
-                    <input class="textInput" type="text" name="city" id="city"  placeholder="Ville" value="paris" required>
+                    <input class="textInput" type="text" name="city" id="city"  placeholder="Ville" value="" required>
                 </p>
             </div>
             <p class="form__btn">
