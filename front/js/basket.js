@@ -44,7 +44,6 @@ function affichePanier(basket, targetId){
             </tr>
         </table>`;
     target.innerHTML = html;
-    console.log('test_b1 - OK');
 }
 var basket = new Basket();
 affichePanier(basket, 'basket');
@@ -104,7 +103,6 @@ function displayContactForm(){
             </p>
         </form>`;
     target.innerHTML = html;
-    console.log('test_b4 - OK');
 
     /**
      * Fait une reqête Ajax de type POST à l'envoi du formulaire
@@ -117,14 +115,12 @@ function displayContactForm(){
         formData.forEach(function(value, key){
             contact[key] = value;
         });
-        alert('1 - Création objet contact'); //TODO:test_b5
 
         var products = [];
         var myBasket = JSON.parse(localStorage.getItem('myBasket'));
         for (let i = 0; i < myBasket.length; i++) {
             products.push(myBasket[i].id);
         }
-        alert('2 - Création tableau produit'); //TODO:test_b5
 
         var toSend = {contact, products};
 
@@ -132,11 +128,7 @@ function displayContactForm(){
         xhr.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 201) {
                 var response = JSON.parse(this.response);
-                alert('3 - Ajax request succesful'); //TODO:test_b5
                 localStorage.setItem('orderId', response.orderId);
-                alert('4 - Envoie orderId dans le localStorage'); //TODO:test_b5
-                console.log('test_b5 - OK');
-                alert('5 - Ouverture de la page de confirmation'); //TODO:test_b5
                 document.location.href = 'confirmation.html';
             } else if(this.readyState == 4) {
                 alert('Une erreur est survenue');

@@ -34,6 +34,5 @@ function orderSummary() {
         </p>
         `
     target.innerHTML = html;
-    console.log('test_c1 - OK');
 }
 orderSummary();

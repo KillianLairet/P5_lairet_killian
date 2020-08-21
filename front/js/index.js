@@ -21,8 +21,6 @@ xhr.open('GET', url);
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var data = JSON.parse(xhr.response);
-        alert('Ajax Request succesful'); //TODO:test_i1
-        console.log('test_i1 - OK')
         for (var i = 0; i < data.length; i++) {
             displayProductForList(data[i], targetId);
         }
@@ -50,7 +48,6 @@ function displayProductForList(product, targetId) {
                 <p class="product__text__description">${product.description}</p>
             </div>
         </div>`;
-    console.log('test_i2 - OK');
 }
 
 /**
@@ -58,7 +55,5 @@ function displayProductForList(product, targetId) {
  * @param {string} selectedProductId L'Id du produit sélectionner 
  */
 function openProductPage(selectedProductId) {
-    console.log('test_i3 - OK');
-    alert('test_i3 - en cours'); //TODO:test_i3
     document.location.href= 'product.html?productId=' + selectedProductId;
 }

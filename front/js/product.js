@@ -15,11 +15,9 @@ var paramKey = 'productId';
 var params = new URLSearchParams(document.location.search);
 if (params.has(paramKey)) {
     var paramValue = params.get(paramKey);
-    alert('Présence du paramètre \'productId\' dans l\'Url'); //TODO:test_p1
-    console.log('test_p1 - OK');
     getProductInfos();
 } else {
-    alert('Aucun produit séléctionné, vous allez être redirigé'); //TODO:test_p2
+    alert('Aucun produit séléctionné, vous allez être redirigé');
     document.location.href = 'index.html';
 }
 
@@ -34,8 +32,6 @@ function getProductInfos() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var data = JSON.parse(xhr.response);
-            alert('Ajax request succesful'); //TODO:test_p3
-            console.log('test_p3 - OK');
             displayProduct(data, targetId);
         }
     };
@@ -62,7 +58,6 @@ function displayProduct(product, targetId){
             <select class="custom-choice-btn" name="customChoice" id="customChoice">${htmlForCustomize}</select>
             <button class="add-to-cart-btn" onclick="openBasketPage('${product._id}', '${product.name}', '${product.price/100}', '${product.imageUrl}')">Ajouter au panier</button>
         </div>`;
-    console.log('test_p4 - OK');
 }
 
 /**
@@ -91,6 +86,4 @@ function openBasketPage(selectedProductId, selectedProductName, selectedProductP
     var basket = new Basket();
     basket.addProduct(product);
     document.location.href= 'basket.html';
-    console.log('test_p6 - OK');
-    alert('Ouverture de la page panier'); //TODO:test_p6
 }

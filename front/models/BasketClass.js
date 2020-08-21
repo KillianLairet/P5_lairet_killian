@@ -44,8 +44,6 @@ class Basket {
     empty(){
         this.basketProducts = [];
         this.setToStorage();
-        console.log('test_b3 - OK');
-        alert('Panier vide'); //TODO:test_b3
     }
 
     /**
@@ -55,8 +53,6 @@ class Basket {
     addProduct(product){
         this.basketProducts.push(product);
         this.setToStorage();
-        console.log('test_p5 - OK');
-        alert('Article ajouter au panier'); //TODO:test_p5
     }
 
     /**
@@ -66,7 +62,5 @@ class Basket {
     removeProduct(idx){
         this.basketProducts.splice(idx, 1);
         this.setToStorage();
-        console.log('test_b2 - OK');
-        alert('Produit supprimer du panier'); //TODO:test_b2
     }
 }
