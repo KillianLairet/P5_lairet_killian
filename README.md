@@ -16,6 +16,4 @@ Vous pouvez ensuite ouvrir le fichier `index.html` dans votre navigateur web
 
 ## Utilisation des tests ##
 
-Pour pouvoir réaliser les tests vous devez changer de branches git.
-Entrez `git checkout test` pour basculer sur la branche de test.
-Ce code source fait apparaître des alert() et des console.log() afin de vérifier chaque étape décrite dans le plan de test.
+Pour pouvoir réaliser les tests vous devez lancer l'application depuis le dossier front-test puis ouvrir le fichier index.html
