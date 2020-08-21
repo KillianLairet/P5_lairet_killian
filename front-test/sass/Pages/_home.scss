@@ -1,0 +1,30 @@
+.home-pg-ctn{
+    h2{
+        margin: 20px 0px;
+        padding: 0px;
+    }
+
+    #product-grid{
+        padding: 20px 20%;
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product{
+        &__img{
+            transition: 300ms ease;
+            &:hover{
+                opacity: 60%;
+                cursor: pointer;
+            }
+        }
+        &__text{
+            a:hover{
+                text-decoration: underline;
+                opacity: 70%;
+                cursor: pointer;
+            }
+        }
+    }
+}

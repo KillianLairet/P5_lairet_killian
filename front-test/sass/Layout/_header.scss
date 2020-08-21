@@ -1,0 +1,33 @@
+header{
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .link-h1{
+        background: linear-gradient(to top, $color-titles 0%, $color-titles 2px, transparent 3px) no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 300ms ease;
+        &:hover{
+            background-size: 100% 100%;
+            opacity: 75%;
+        }
+        h1{
+        margin: 0px;
+        padding: 0px;
+        }
+    }
+    #mon_panier{
+        position: absolute;
+        right: 5%;
+        a{
+            font-size: 30px;
+            &:hover{
+                opacity: 75%;
+            }
+        }
+    }
+}

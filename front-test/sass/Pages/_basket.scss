@@ -1,0 +1,89 @@
+.bkt-pg-ctn{
+    padding: 10px 20%;
+    margin-bottom: 100px;
+    h2{
+        margin: 20px 0px;
+        padding: 0px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $color-divider;
+    }
+    &__abstract{
+        display: flex;
+        border-bottom: 1px solid $color-divider;
+        margin: 20px 0px;
+        padding: 20px 0px;
+        &__price{
+            width: 35%;
+            display: flex;
+            justify-content: space-around;
+        }
+        &__btn{
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    #basket{
+        table{
+            width: 100%;
+        }
+        tr{
+            margin: 20px 0px;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-divider;
+        }
+        td{
+            align-self: center;
+        }
+        .bkt-end{
+            &__btn{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            }
+        }
+    }
+
+    #contactInfos{
+        margin-top: 20px;
+        .form{
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: $color-tertiary;
+            border-radius: 30px;
+            &__info{
+                width: 50%;
+                p{
+                    padding: 5px 0px;
+                }
+            }
+            &__delivery{
+                width: 50%;
+                p{
+                    padding: 5px 0px;
+                }
+            }
+            .legend{
+                padding: 6px 0px;
+            }
+            .textInput{
+                padding: 6px 6px;
+                width: 90%;
+                background-color: transparent;
+                border: 1px solid $color-divider;
+                border-radius: 10px;
+            }
+            &__btn{
+                margin: 20px 10px 0px 0px;
+                width: 100%;
+                text-align: end;
+            }
+        }
+    }
+}

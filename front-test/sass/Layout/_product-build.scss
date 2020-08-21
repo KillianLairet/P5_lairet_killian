@@ -1,0 +1,32 @@
+.product{
+    margin: 20px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    &__img{
+        width: 50%;
+    }
+    &__text{
+        width: 40%;
+        &__price{
+            padding-bottom: 8px;
+        }
+    }
+
+    &--page{
+        margin: 5% 20%;
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        &__img{
+            width: 50%;
+        }
+        &__text{
+            position: relative;
+            width: 40%;
+            &__price{
+                padding-bottom: 8px;
+            }
+        }
+    }
+}

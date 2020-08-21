@@ -1,0 +1,102 @@
+.add-to-cart-btn{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 45%;
+    height: 40px;
+    padding: 6px 0px;
+    background-color: $color-secondary;
+    opacity: 80%;
+    border-radius: 10px;
+    border: 1px solid $color-divider;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
+
+.custom-choice-btn{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 45%;
+    height: 40px;
+    background-color: $color-primary;
+    opacity: 80%;
+    border-radius: 10px;
+    border: 1px solid $color-divider;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
+
+.delete-btn{
+    padding: 6px 0px;
+    background-color: transparent;
+    opacity: 60%;
+    border: none;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
+
+.deleteAll-btn{
+    width: 50%;
+    height: 40px;
+    padding: 6px 0px;
+    margin: 0px 10px;
+    background-color: transparent;
+    opacity: 60%;
+    border-radius: 10px;
+    border: 1px solid $color-divider;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
+
+.payment-btn{
+    width: 50%;
+    height: 40px;
+    padding: 6px 0px;
+    margin: 0px 10px;
+    background-color: $color-secondary;
+    opacity: 80%;
+    border-radius: 10px;
+    border: 1px solid $color-divider;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
+
+.cancelForm-btn{
+    width: 20%;
+    padding: 6px 0px;
+    margin: 0px 5px;
+    background-color: transparent;
+    opacity: 60%;
+    border: none;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+        border: 1px solid $color-divider;
+        border-radius: 10px;
+    }
+}
+
+.order-btn{
+    width: 20%;
+    padding: 6px 0px;
+    margin: 0px 10px;
+    background-color: $color-secondary;
+    opacity: 80%;
+    border-radius: 10px;
+    border: 1px solid $color-divider;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+}
